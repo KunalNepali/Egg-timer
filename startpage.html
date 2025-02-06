@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Timer - Select</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h2>Select Egg Type</h2>
+    </header>
+    <main>
+        <div class="egg-options">
+            <button onclick="startTimer(180)">Soft (3 min)</button>
+            <button onclick="startTimer(300)">Medium (5 min)</button>
+            <button onclick="startTimer(420)">Hard (7 min)</button>
+            <button onclick="startTimer(600)">Extra Hard (10 min)</button>
+        </div>
+        <h3 id="timerDisplay">Your egg is ready in: --:--</h3>
+    </main>
+    <script>
+        function startTimer(seconds) {
+            let timerDisplay = document.getElementById('timerDisplay');
+            let timeLeft = seconds;
+            
+            function updateTimer() {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                timerDisplay.innerText = `Your egg is ready in: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateTimer, 1000);
+                } else {
+                    alert("Your egg is ready!");
+                }
+            }
+
+            updateTimer();
+        }
+    </script>
+</body>
+</html>

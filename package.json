@@ -1,0 +1,17 @@
+{
+  "name": "egg_timer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-forge": "^6.0.0"
+  }
+}

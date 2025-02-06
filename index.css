@@ -1,0 +1,46 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    margin: auto;
+    max-width: 38rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Colors */
+:root {
+    --orange: #f07e5f;
+    --white: #FFFFFF;
+    --brown: #67452d;
+    --lightorange: #f19561;
+    --borderyellow: #f9bd00;
+    --yellowmid: #ffdeb9;
+    --backgroundyellow: #ffea79;
+}
+
+h1, h2, h3 {
+    color: var(--brown);
+    font-family: "Pixelify Sans";
+}
+
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+img {
+    max-width: 100%; /* Ensure images are not too large */
+    display: block; /* Make sure the images are visible */
+}
+
+#timerDisplay {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+}
